@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Découvrez les témoignages de nos clients chez THE BOX VR. Plus de 15 000 avis positifs pour la meilleure expérience de réalité virtuelle à Paris.">
+  <meta name="author" content="THE BOX VR">
+  <title>Témoignages | THE BOX VR - Salle de Réalité Virtuelle</title>
+
+  <link rel="icon" href="../virtual_reality-512.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+
+  <style>
+    /* ── Testimonials Page Styles ── */
+
+    .testimonials-stats {
+      padding: 80px 0 60px;
+    }
+
+    .testimonials-stats .stat-box {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .testimonials-stats .stat-box .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary, #00d4ff));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .testimonials-stats .stat-box .stat-label {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 8px;
+    }
+
+    /* Featured Section */
+    .section-featured {
+      padding: 80px 0;
+    }
+
+    .section-featured .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-featured .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-featured .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    /* Testimonial Cards */
+    .card-testimonial {
+      padding: 35px 30px;
+      margin-bottom: 30px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-testimonial .quote-icon {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 2rem;
+      color: var(--primary);
+      opacity: 0.15;
+    }
+
+    .card-testimonial .stars {
+      margin-bottom: 15px;
+    }
+
+    .card-testimonial .stars i {
+      color: #ffc107;
+      font-size: 0.95rem;
+      margin-right: 2px;
+    }
+
+    .card-testimonial .stars i.empty {
+      color: rgba(255, 255, 255, 0.15);
+    }
+
+    .card-testimonial .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .card-testimonial.featured .testimonial-text {
+      font-size: 1.05rem;
+    }
+
+    .card-testimonial .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 18px;
+    }
+
+    .card-testimonial .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .card-testimonial .author-info h5 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0 0 3px;
+      color: #fff;
+    }
+
+    .card-testimonial .author-info span {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Avatar Gradients */
+    .avatar-gradient-1 { background: linear-gradient(135deg, #6e3aff, #b84cf0); }
+    .avatar-gradient-2 { background: linear-gradient(135deg, #00b4d8, #0077b6); }
+    .avatar-gradient-3 { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+    .avatar-gradient-4 { background: linear-gradient(135deg, #00c9a7, #00896e); }
+    .avatar-gradient-5 { background: linear-gradient(135deg, #f9ca24, #f0932b); }
+    .avatar-gradient-6 { background: linear-gradient(135deg, #e056a0, #a855f7); }
+    .avatar-gradient-7 { background: linear-gradient(135deg, #4ecdc4, #44bd9e); }
+    .avatar-gradient-8 { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .avatar-gradient-9 { background: linear-gradient(135deg, #fc5c7d, #6a82fb); }
+
+    /* Grid Section */
+    .section-grid {
+      padding: 60px 0 80px;
+    }
+
+    .section-grid .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-grid .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-grid .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    /* Platforms Section */
+    .section-platforms {
+      padding: 80px 0;
+    }
+
+    .section-platforms .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-platforms .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-platforms .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .platform-card {
+      text-align: center;
+      padding: 40px 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .platform-card .platform-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .platform-card .platform-icon.google { color: #4285f4; }
+    .platform-card .platform-icon.tripadvisor { color: #34e0a1; }
+    .platform-card .platform-icon.facebook { color: #1877f2; }
+
+    .platform-card .platform-name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .platform-card .platform-rating {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary, #00d4ff));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .platform-card .platform-rating span {
+      font-size: 1rem;
+      font-weight: 400;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .platform-card .stars {
+      margin: 10px 0;
+    }
+
+    .platform-card .stars i {
+      color: #ffc107;
+      font-size: 1rem;
+    }
+
+    .platform-card .platform-count {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .section-cta-testimonial {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 50px 40px;
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-box p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-box .btn {
+      margin: 5px 8px;
+    }
+
+    /* Tag/Badge for experience type */
+    .testimonial-tag {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: rgba(var(--primary-rgb, 110, 58, 255), 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(var(--primary-rgb, 110, 58, 255), 0.25);
+    }
+
+    .testimonial-date {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-thebox fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">THE<b>BOX</b> <span class="brand-vr">VR</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="experiencesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Expériences</a>
+            <div class="dropdown-menu" aria-labelledby="experiencesDropdown">
+              <a class="dropdown-item" href="equipements.html"><i class="fas fa-vr-cardboard"></i> Équipements VR</a>
+              <a class="dropdown-item" href="packages.html"><i class="fas fa-gamepad"></i> Packages & Tarifs</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="communauteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Communauté</a>
+            <div class="dropdown-menu" aria-labelledby="communauteDropdown">
+              <a class="dropdown-item" href="blog.html"><i class="fas fa-newspaper"></i> Blog & Actualités</a>
+              <a class="dropdown-item" href="temoignages.html"><i class="fas fa-star"></i> Témoignages</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <h1>Témoignages</h1>
+      <p>Découvrez ce que nos visiteurs pensent de leur expérience chez THE BOX VR</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="#">Communauté</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Témoignages</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Rating Overview / Stats -->
+  <section class="testimonials-stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <div class="stat-box card-glass">
+            <div class="stat-number"><span data-count="4.9">0</span>/5</div>
+            <div class="stat-label">Note moyenne</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box card-glass">
+            <div class="stat-number"><span data-count="15000">0</span>+</div>
+            <div class="stat-label">Avis</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box card-glass">
+            <div class="stat-number"><span data-count="98">0</span>%</div>
+            <div class="stat-label">Recommandent</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box card-glass">
+            <div class="stat-number"><span data-count="12000">0</span>+</div>
+            <div class="stat-label">Visiteurs récurrents</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Testimonials -->
+  <section class="section-featured">
+    <div class="container">
+      <div class="section-title">
+        <h2>Témoignages <span style="color:var(--primary);">à la une</span></h2>
+        <p>Les expériences les plus marquantes racontées par nos visiteurs</p>
+      </div>
+      <div class="row">
+
+        <!-- Featured 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial featured">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-users"></i> Famille</span>
+            <p class="testimonial-text">
+              "Nous sommes venus avec nos trois enfants (8, 11 et 14 ans) pour un samedi après-midi et honnêtement, c'est la meilleure sortie en famille qu'on ait faite depuis longtemps. L'équipe a pris le temps de tout expliquer aux enfants, de les rassurer et de leur trouver des jeux adaptés à chaque âge. Mon fils de 8 ans n'arrivait plus à retirer le casque tellement il s'amusait ! Le coin café est super agréable pour les parents qui veulent souffler pendant que les enfants jouent. On a déjà réservé pour le mois prochain. Un immense merci à toute l'équipe pour leur patience et leur gentillesse."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-1"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Sophie Durand</h5>
+                <span>Maman de 3 enfants &bull; Visite famille</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Janvier 2026</div>
+          </div>
+        </div>
+
+        <!-- Featured 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial featured">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-briefcase"></i> Entreprise</span>
+            <p class="testimonial-text">
+              "J'ai organisé notre team building annuel chez THE BOX VR pour une équipe de 20 personnes et le résultat a dépassé toutes nos attentes. L'espace privatisé était parfait, les activités collaboratives en VR ont vraiment resserré les liens de l'équipe. Des collègues qui ne se parlaient jamais se sont retrouvés à hurler de rire ensemble dans un escape game virtuel. Le buffet était excellent et le personnel aux petits soins. Plusieurs collaborateurs m'ont dit que c'était le meilleur événement d'entreprise auquel ils avaient participé. Je recommande à 200% pour tout CE ou manager qui cherche une idée originale."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-2"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Marc Lefèvre</h5>
+                <span>Directeur RH &bull; Team building entreprise</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Décembre 2025</div>
+          </div>
+        </div>
+
+        <!-- Featured 3 -->
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card-glass card-testimonial featured">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-gamepad"></i> Gamer</span>
+            <p class="testimonial-text">
+              "En tant que gamer passionné et propriétaire d'un Quest 3 à la maison, j'étais un peu sceptique en arrivant. Mais THE BOX VR, c'est un tout autre niveau. Le tracking full body, les espaces de jeu immenses, les simulations avec retour haptique... impossible d'avoir ça chez soi. J'ai testé leur setup avec le Valve Index et un PC surpuissant sur Half-Life Alyx : c'est comme ça que ce jeu doit être joué. Le staff connaît ses machines sur le bout des doigts, on sent que ce sont de vrais passionnés. Je viens maintenant tous les week-ends et j'ai pris l'abonnement mensuel. Meilleure salle VR de Paris, sans aucun doute."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-3"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Théo Garnier</h5>
+                <span>Gamer passionné &bull; Abonné mensuel</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Février 2026</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Testimonials Grid -->
+  <section class="section-grid">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ce que disent <span style="color:var(--primary);">nos visiteurs</span></h2>
+        <p>Des centaines d'expériences uniques partagées par notre communauté</p>
+      </div>
+      <div class="row">
+
+        <!-- Testimonial 1 - Birthday -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-birthday-cake"></i> Anniversaire</span>
+            <p class="testimonial-text">
+              "L'anniversaire de ma fille de 12 ans chez THE BOX VR restera gravé dans nos mémoires ! On a réservé la formule anniversaire pour 8 enfants et tout était parfaitement organisé. Les animateurs ont géré le groupe avec une énergie incroyable. Le gâteau VR personnalisé était une touche adorable. Tous les parents des invités m'ont appelée ensuite pour savoir où c'était. Bravo pour ce concept génial !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-4"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Isabelle Moreau</h5>
+                <span>Organisatrice anniversaire</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Novembre 2025</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 - Couple -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-heart"></i> Couple</span>
+            <p class="testimonial-text">
+              "On cherchait une idée de sortie originale avec mon copain et on est tombés sur THE BOX VR. Franchement, on a adoré ! On a fait le parcours coopératif ensemble et c'était trop drôle de se voir galérer à deux. Ensuite on a pris un café dans leur coin lounge, l'ambiance est super cosy. Parfait pour un rencard différent. On reviendra !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-5"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Léa Martin</h5>
+                <span>Sortie en couple</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Février 2026</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 - Student -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-graduation-cap"></i> Étudiant</span>
+            <p class="testimonial-text">
+              "Avec le tarif étudiant, c'est hyper accessible. On y va souvent avec les potes après les cours. Le catalogue de jeux est énorme et ils en rajoutent régulièrement. Le wifi est gratuit et le café pas cher. Seul petit bémol : le week-end c'est parfois bondé, mais en semaine c'est le paradis. Gros coup de coeur pour Beat Saber en mode compétition !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-6"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Karim Benali</h5>
+                <span>Étudiant en informatique</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Janvier 2026</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 - Senior -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-heart"></i> Découverte</span>
+            <p class="testimonial-text">
+              "À 67 ans, je n'aurais jamais pensé essayer la réalité virtuelle. Ce sont mes petits-enfants qui m'ont offert une session pour mon anniversaire. J'appréhendais beaucoup, mais le jeune homme qui m'a accompagnée a été d'une patience extraordinaire. J'ai visité les fonds marins et survolé Paris... des moments magiques. J'ai même pleuré d'émotion. Merci pour cette expérience inoubliable, j'en parle encore à tout le monde !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-7"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Monique Pelletier</h5>
+                <span>Retraitée &bull; Première expérience VR</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Décembre 2025</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 - Tourist -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-plane"></i> Touriste</span>
+            <p class="testimonial-text">
+              "De passage à Paris depuis Montréal, on a découvert THE BOX VR sur TripAdvisor. Quelle trouvaille ! L'accueil en anglais et en français était impeccable. On a passé deux heures incroyables. Rien de comparable au Québec. Si vous visitez Paris, ajoutez cette adresse à votre itinéraire, vous ne le regretterez pas. Merci les amis !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-8"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Jean-Philippe Tremblay</h5>
+                <span>Touriste &bull; Montréal, Canada</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Octobre 2025</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 - Regular -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-redo"></i> Habitué</span>
+            <p class="testimonial-text">
+              "Client régulier depuis l'ouverture, je peux témoigner de l'évolution constante de THE BOX VR. L'équipe renouvelle les expériences, écoute les retours clients et investit dans du matériel de qualité. C'est devenu mon rituel du vendredi soir avec les copains. L'abonnement est rentabilisé dès la deuxième visite du mois. Continuez comme ça !"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-9"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Alexandre Petit</h5>
+                <span>Client fidèle &bull; Abonné depuis 2024</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Février 2026</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 7 - Family with kids -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-users"></i> Famille</span>
+            <p class="testimonial-text">
+              "Super expérience avec nos jumeaux de 10 ans ! Les jeux éducatifs en VR sont vraiment bien faits, ils ont appris des trucs sur le système solaire tout en s'amusant. Seul regret : la session passe beaucoup trop vite. Pensez à réserver le créneau de 2h, une heure ça ne suffit pas avec des enfants le temps qu'ils s'habituent."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-1"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Frédéric Roux</h5>
+                <span>Papa de jumeaux &bull; Sortie famille</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Janvier 2026</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 8 - Corporate -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-briefcase"></i> Entreprise</span>
+            <p class="testimonial-text">
+              "Nous avons choisi THE BOX VR pour notre séminaire de rentrée. 35 collaborateurs, un défi logistique que l'équipe a relevé haut la main. L'organisation était millimétrée, les tournois en équipe ont créé une émulation extraordinaire. Le traiteur sur place proposait des formules adaptées. Un retour unanimement positif de tous les participants. Contrat renouvelé pour 2026."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-2"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Caroline Dubois</h5>
+                <span>Office Manager &bull; Startup tech</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Septembre 2025</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 9 - Hardcore Gamer -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass card-testimonial">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="testimonial-tag"><i class="fas fa-gamepad"></i> Gamer</span>
+            <p class="testimonial-text">
+              "J'ai testé pas mal de salles VR en France et à l'étranger. THE BOX VR est clairement dans le top. Le matos est toujours nickel, bien entretenu, zéro latence. J'apprécie particulièrement qu'ils aient des configs PC gaming haut de gamme avec des RTX 4090 et pas juste des casques standalone. Ça fait la diff sur les gros titres. Les tournois mensuels c'est un gros plus aussi."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-gradient-3"><i class="fas fa-user"></i></div>
+              <div class="author-info">
+                <h5>Nicolas Vasseur</h5>
+                <span>Gamer compétitif &bull; Streamer</span>
+              </div>
+            </div>
+            <div class="testimonial-date"><i class="far fa-calendar-alt"></i> Décembre 2025</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Plateformes d'Avis -->
+  <section class="section-platforms">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nos notes sur les <span style="color:var(--primary);">plateformes d'avis</span></h2>
+        <p>Retrouvez-nous sur les principales plateformes et partagez votre expérience</p>
+      </div>
+      <div class="row justify-content-center">
+
+        <!-- Google Reviews -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass platform-card">
+            <div class="platform-icon google">
+              <i class="fab fa-google"></i>
+            </div>
+            <h4 class="platform-name">Google Reviews</h4>
+            <div class="platform-rating">4.9 <span>/ 5</span></div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="platform-count">Basé sur 8 200+ avis</p>
+          </div>
+        </div>
+
+        <!-- TripAdvisor -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass platform-card">
+            <div class="platform-icon tripadvisor">
+              <i class="fab fa-tripadvisor"></i>
+            </div>
+            <h4 class="platform-name">TripAdvisor</h4>
+            <div class="platform-rating">5.0 <span>/ 5</span></div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="platform-count">Basé sur 3 400+ avis</p>
+          </div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card-glass platform-card">
+            <div class="platform-icon facebook">
+              <i class="fab fa-facebook"></i>
+            </div>
+            <h4 class="platform-name">Facebook</h4>
+            <div class="platform-rating">4.8 <span>/ 5</span></div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="platform-count">Basé sur 4 100+ avis</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-cta-testimonial">
+    <div class="container">
+      <div class="card-glass cta-box">
+        <h2>Partagez <span style="color:var(--primary);">votre expérience</span></h2>
+        <p>Vous avez visité THE BOX VR ? Votre avis compte ! Aidez d'autres passionnés à découvrir notre univers en laissant un témoignage. Et si vous n'êtes pas encore venu, il est temps de réserver votre session.</p>
+        <div>
+          <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-pen"></i> Laisser un avis</a>
+          <a href="packages.html" class="btn btn-outline-light btn-lg"><i class="fas fa-calendar-check"></i> Réserver une session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 style="font-family:var(--font-heading);font-size:1.3rem;">THE<b>BOX</b> <span style="color:var(--primary);">VR</span></h5>
+          <p>La première salle de réalité virtuelle nouvelle génération. Des expériences immersives uniques dans un cadre exceptionnel alliant technologie de pointe et convivialité.</p>
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 mb-4">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-4">
+          <h5>Infos</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="#">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5>Contact</h5>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h5 style="margin:0;">Adresse</h5><p>123 Rue de la Réalité Virtuelle, 75001 Paris</p></div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div><h5 style="margin:0;">Horaires</h5><p>Mar-Dim : 10h - 22h | Lun : Fermé</p></div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-phone"></i></div>
+            <div><h5 style="margin:0;">Téléphone</h5><p>01 23 45 67 89</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <div class="container text-center">
+      <p>Copyright &copy; THE BOX VR 2026 - Tous droits réservés</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="btn-back-top" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

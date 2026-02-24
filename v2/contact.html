@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Contactez THE BOX VR - Salle de réalité virtuelle à Paris. Formulaire de contact, horaires d'ouverture, plan d'accès et FAQ. Réservez votre session VR dès maintenant.">
+  <meta name="author" content="THE BOX VR">
+  <meta name="keywords" content="contact THE BOX VR, réservation VR, salle réalité virtuelle Paris, horaires, FAQ, plan accès">
+  <title>Contact | THE BOX VR - Salle de Réalité Virtuelle</title>
+
+  <link rel="icon" href="../virtual_reality-512.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+
+  <style>
+    /* ── Contact Page Styles ── */
+
+    /* Contact Info Cards */
+    .section-contact-info {
+      padding: 80px 0 60px;
+    }
+
+    .contact-info-card {
+      text-align: center;
+      padding: 35px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-info-card .contact-icon {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+      color: var(--primary);
+      font-size: 1.6rem;
+      margin: 0 auto 1.2rem;
+      border: 1px solid var(--border-glow);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info-card:hover .contact-icon {
+      box-shadow: var(--glow-primary);
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(124, 58, 237, 0.2));
+    }
+
+    .contact-info-card h4 {
+      font-family: var(--font-accent);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .contact-info-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact-info-card a {
+      color: var(--primary);
+      transition: color 0.2s ease;
+    }
+
+    .contact-info-card a:hover {
+      color: var(--primary-light);
+    }
+
+    /* Contact Form Section */
+    .section-contact-form {
+      padding: 60px 0 80px;
+    }
+
+    .section-contact-form .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-contact-form .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-contact-form .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .contact-form-card {
+      padding: 40px;
+    }
+
+    .contact-form-card .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form-card textarea.form-control-dark {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .custom-checkbox-dark {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+
+    .custom-checkbox-dark input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--primary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .custom-checkbox-dark span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Hours & Info Sidebar */
+    .hours-card {
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .hours-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-primary);
+    }
+
+    .hours-note {
+      margin-top: 1rem;
+      padding: 12px 15px;
+      border-radius: 10px;
+      background: rgba(0, 212, 255, 0.05);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .hours-note i {
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .quick-links-card {
+      padding: 30px;
+    }
+
+    .quick-links-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-primary);
+    }
+
+    .quick-link-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .quick-link-item:last-child {
+      border-bottom: none;
+    }
+
+    .quick-link-item:hover {
+      color: var(--primary);
+    }
+
+    .quick-link-item i {
+      color: var(--primary);
+      width: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .sidebar-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .sidebar-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .sidebar-social a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(0, 212, 255, 0.1);
+      box-shadow: var(--glow-primary);
+    }
+
+    /* Map Section */
+    .section-map {
+      padding: 60px 0 80px;
+    }
+
+    .section-map .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-map .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-map .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .map-info-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .map-info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 50px;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .map-info-item i {
+      color: var(--primary);
+    }
+
+    /* FAQ Section */
+    .section-faq {
+      padding: 80px 0;
+    }
+
+    .section-faq .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-faq .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-faq .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    /* Social Media Section */
+    .section-social {
+      padding: 80px 0;
+    }
+
+    .section-social .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-social .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-social .section-title p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .social-card {
+      text-align: center;
+      padding: 40px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .social-card .social-icon {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-card:hover .social-icon {
+      transform: scale(1.15);
+    }
+
+    .social-card .social-icon.facebook { color: #1877f2; }
+    .social-card .social-icon.instagram { color: #e4405f; }
+    .social-card .social-icon.twitter { color: #1da1f2; }
+    .social-card .social-icon.tiktok { color: #69c9d0; }
+    .social-card .social-icon.youtube { color: #ff0000; }
+
+    .social-card h4 {
+      font-family: var(--font-accent);
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--text-primary);
+    }
+
+    .social-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .social-card .social-handle {
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-family: var(--font-accent);
+      color: var(--primary);
+      background: rgba(0, 212, 255, 0.08);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+    }
+
+    /* CTA Section */
+    .section-cta-contact {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 50px 40px;
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-box p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-box .btn {
+      margin: 5px 8px;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-thebox fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">THE<b>BOX</b> <span class="brand-vr">VR</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="experiencesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Expériences</a>
+            <div class="dropdown-menu" aria-labelledby="experiencesDropdown">
+              <a class="dropdown-item" href="equipements.html"><i class="fas fa-vr-cardboard"></i> Équipements VR</a>
+              <a class="dropdown-item" href="packages.html"><i class="fas fa-gamepad"></i> Packages & Tarifs</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="communauteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Communauté</a>
+            <div class="dropdown-menu" aria-labelledby="communauteDropdown">
+              <a class="dropdown-item" href="blog.html"><i class="fas fa-newspaper"></i> Blog & Actualités</a>
+              <a class="dropdown-item" href="temoignages.html"><i class="fas fa-star"></i> Témoignages</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <h1>Contactez-Nous</h1>
+      <p>Une question, une réservation ou une demande particulière ? Nous sommes à votre écoute.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Info Cards -->
+  <section class="section-contact-info">
+    <div class="container">
+      <div class="row stagger-children">
+        <div class="col-lg-3 col-md-6 mb-4 reveal">
+          <div class="card-glass contact-info-card info-box">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Adresse</h4>
+            <p>123 Rue de la Réalité Virtuelle<br>75001 Paris, France</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 reveal">
+          <div class="card-glass contact-info-card info-box">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <h4>Téléphone</h4>
+            <p><a href="tel:+33123456789">01 23 45 67 89</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 reveal">
+          <div class="card-glass contact-info-card info-box">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p><a href="mailto:contact@thebox-vr.com">contact@thebox-vr.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 reveal">
+          <div class="card-glass contact-info-card info-box">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <h4>Horaires</h4>
+            <p>Mar - Dim : 10h - 22h<br>Lun : Fermé</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Contact Form + Hours/Info -->
+  <section class="section-contact-form">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Envoyez-nous un <span style="color:var(--primary);">message</span></h2>
+        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais</p>
+      </div>
+      <div class="row">
+
+        <!-- LEFT: Contact Form -->
+        <div class="col-lg-7 mb-4 reveal-left">
+          <div class="card-glass contact-form-card">
+            <form id="contactForm" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-dark" for="contactNom"><i class="fas fa-user" style="color:var(--primary);margin-right:6px;"></i>Nom complet *</label>
+                    <input type="text" class="form-control form-control-dark" id="contactNom" name="nom" placeholder="Votre nom et prénom" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-dark" for="contactEmail"><i class="fas fa-envelope" style="color:var(--primary);margin-right:6px;"></i>Email *</label>
+                    <input type="email" class="form-control form-control-dark" id="contactEmail" name="email" placeholder="votre@email.com" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-dark" for="contactTel"><i class="fas fa-phone" style="color:var(--primary);margin-right:6px;"></i>Téléphone</label>
+                    <input type="tel" class="form-control form-control-dark" id="contactTel" name="telephone" placeholder="01 23 45 67 89">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-dark" for="contactSujet"><i class="fas fa-tag" style="color:var(--primary);margin-right:6px;"></i>Sujet *</label>
+                    <select class="form-control form-control-dark" id="contactSujet" name="sujet" required>
+                      <option value="" disabled selected>Choisissez un sujet...</option>
+                      <option value="reservation">Réservation</option>
+                      <option value="information">Information</option>
+                      <option value="evenement">Événement privé</option>
+                      <option value="teambuilding">Team Building</option>
+                      <option value="partenariat">Partenariat</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label-dark" for="contactMessage"><i class="fas fa-comment" style="color:var(--primary);margin-right:6px;"></i>Message *</label>
+                <textarea class="form-control form-control-dark" id="contactMessage" name="message" placeholder="Décrivez votre demande en détail..." rows="6" required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="custom-checkbox-dark">
+                  <input type="checkbox" name="newsletter">
+                  <span>Je souhaite recevoir la newsletter de THE BOX VR pour rester informé(e) des nouveautés, offres spéciales et événements à venir.</span>
+                </label>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn-neon btn-neon-primary"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- RIGHT: Hours & Quick Links -->
+        <div class="col-lg-5 mb-4 reveal-right">
+
+          <!-- Opening Hours -->
+          <div class="card-glass hours-card">
+            <h4><i class="fas fa-clock" style="color:var(--primary);margin-right:8px;"></i>Horaires d'ouverture</h4>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>Lundi</td>
+                  <td style="color:var(--accent);">Fermé</td>
+                </tr>
+                <tr>
+                  <td>Mardi</td>
+                  <td>10h00 - 22h00</td>
+                </tr>
+                <tr>
+                  <td>Mercredi</td>
+                  <td>10h00 - 22h00</td>
+                </tr>
+                <tr>
+                  <td>Jeudi</td>
+                  <td>10h00 - 22h00</td>
+                </tr>
+                <tr>
+                  <td>Vendredi</td>
+                  <td>10h00 - 23h00</td>
+                </tr>
+                <tr>
+                  <td>Samedi</td>
+                  <td>10h00 - 23h00</td>
+                </tr>
+                <tr>
+                  <td>Dimanche</td>
+                  <td>10h00 - 21h00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="hours-note">
+              <i class="fas fa-info-circle"></i>
+              <strong>Jours fériés :</strong> Nous sommes ouverts la plupart des jours fériés avec des horaires adaptés (11h - 20h). Consultez nos réseaux sociaux pour les fermetures exceptionnelles.
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="card-glass quick-links-card">
+            <h4><i class="fas fa-bolt" style="color:var(--primary);margin-right:8px;"></i>Contact rapide</h4>
+            <a href="tel:+33123456789" class="quick-link-item">
+              <i class="fas fa-phone"></i>
+              <span>01 23 45 67 89</span>
+            </a>
+            <a href="mailto:contact@thebox-vr.com" class="quick-link-item">
+              <i class="fas fa-envelope"></i>
+              <span>contact@thebox-vr.com</span>
+            </a>
+            <a href="mailto:events@thebox-vr.com" class="quick-link-item">
+              <i class="fas fa-calendar-star"></i>
+              <span>events@thebox-vr.com (Événements)</span>
+            </a>
+            <a href="mailto:pro@thebox-vr.com" class="quick-link-item">
+              <i class="fas fa-briefcase"></i>
+              <span>pro@thebox-vr.com (Entreprises)</span>
+            </a>
+            <div style="margin-top:20px;">
+              <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:10px;">Suivez-nous :</p>
+              <div class="sidebar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Map Section -->
+  <section class="section-map">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Nous <span style="color:var(--primary);">trouver</span></h2>
+        <p>THE BOX VR est idéalement situé au coeur de Paris, facilement accessible en transports</p>
+      </div>
+      <div class="reveal-scale">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999!2d2.3422!3d48.8606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation THE BOX VR - Paris">
+          </iframe>
+        </div>
+      </div>
+      <div class="map-info-row justify-content-center mt-4 reveal">
+        <div class="map-info-item">
+          <i class="fas fa-subway"></i>
+          <span>Métro : Châtelet (L1, L4, L7, L11, L14)</span>
+        </div>
+        <div class="map-info-item">
+          <i class="fas fa-bus"></i>
+          <span>Bus : Lignes 21, 38, 47, 85</span>
+        </div>
+        <div class="map-info-item">
+          <i class="fas fa-car"></i>
+          <span>Parking Rivoli-Sébastopol à 200m</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- FAQ Section -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Questions <span style="color:var(--primary);">fréquentes</span></h2>
+        <p>Retrouvez les réponses aux questions les plus posées par nos visiteurs</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-calendar-check" style="color:var(--primary);margin-right:10px;"></i>Comment réserver une session chez THE BOX VR ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Réserver chez THE BOX VR est simple et rapide ! Vous pouvez réserver directement en ligne via notre page <a href="packages.html">Packages & Tarifs</a>, par téléphone au <strong>01 23 45 67 89</strong>, par email à <strong>contact@thebox-vr.com</strong>, ou tout simplement en vous rendant sur place. Nous recommandons la réservation en ligne pour garantir votre créneau, surtout le week-end et pendant les vacances scolaires. Le paiement s'effectue sur place le jour de votre session.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-child" style="color:var(--primary);margin-right:10px;"></i>Quel est l'âge minimum pour participer ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>L'âge minimum recommandé est de <strong>7 ans</strong> pour les expériences VR adaptées aux enfants, et de <strong>13 ans</strong> pour l'ensemble de notre catalogue de jeux. Les mineurs doivent obligatoirement être accompagnés d'un adulte responsable. Nous disposons d'expériences spécialement conçues pour les plus jeunes, avec des sessions encadrées par nos animateurs. Pour les enfants de moins de 10 ans, nous limitons les sessions à 30 minutes consécutives pour le confort visuel.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-question-circle" style="color:var(--primary);margin-right:10px;"></i>Faut-il avoir de l'expérience en VR pour venir ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolument pas ! La grande majorité de nos visiteurs découvrent la réalité virtuelle pour la première fois chez nous. Chaque session commence par un <strong>briefing personnalisé</strong> où notre équipe vous explique le fonctionnement du casque et des manettes. Nos animateurs sont formés pour accompagner les débutants complets comme les gamers expérimentés. Nous adaptons les expériences proposées à votre niveau et vos préférences. Aucune compétence technique n'est requise !</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-birthday-cake" style="color:var(--primary);margin-right:10px;"></i>Peut-on organiser un anniversaire chez THE BOX VR ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Bien sûr ! Nous proposons des <strong>formules anniversaire sur mesure</strong> pour enfants et adultes. Nos packages incluent la privatisation d'un espace dédié, des sessions VR adaptées à l'âge des participants, un animateur dédié, et la possibilité d'ajouter un goûter ou un buffet. Nous pouvons accueillir des groupes de <strong>6 à 25 personnes</strong>. Pour organiser un anniversaire, contactez-nous par email à <strong>events@thebox-vr.com</strong> ou par téléphone au moins 2 semaines à l'avance.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-glasses" style="color:var(--primary);margin-right:10px;"></i>Les lunettes de vue sont-elles compatibles avec les casques VR ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, la plupart de nos casques VR sont <strong>compatibles avec les lunettes de vue</strong>. Nos casques Meta Quest 3, HTC Vive Pro 2 et Valve Index disposent d'un espace suffisant pour accueillir la majorité des montures. De plus, certains casques intègrent un <strong>réglage de dioptrie</strong> permettant aux personnes légèrement myopes de jouer sans lunettes. Si vous avez des montures très larges, prévenez-nous lors de la réservation et nous vous conseillerons le casque le plus adapté.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-subway" style="color:var(--primary);margin-right:10px;"></i>Comment venir en transport en commun ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>THE BOX VR est très bien desservi par les transports en commun. La station de <strong>métro Châtelet</strong> (lignes 1, 4, 7, 11, 14) se trouve à moins de 5 minutes à pied. Vous pouvez également emprunter le <strong>RER A ou B</strong> (station Châtelet - Les Halles). Plusieurs lignes de bus desservent le quartier : <strong>lignes 21, 38, 47 et 85</strong>. Pour les cyclistes, une station Vélib' est disponible juste en face de notre établissement.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-parking" style="color:var(--primary);margin-right:10px;"></i>Y a-t-il un parking à proximité ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Bien que nous ne disposions pas de parking privé, plusieurs parkings publics se trouvent à proximité immédiate. Le <strong>Parking Rivoli-Sébastopol</strong> est à environ 200 mètres (accessible 24h/24). Le <strong>Parking des Halles</strong> est également à moins de 5 minutes à pied. Les tarifs moyens sont d'environ 4 à 5 euros par heure. Nous vous conseillons néanmoins de privilégier les transports en commun, le quartier étant très bien desservi.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span><i class="fas fa-gift" style="color:var(--primary);margin-right:10px;"></i>Proposez-vous des bons cadeaux ?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, nous proposons des <strong>cartes cadeaux</strong> disponibles à l'achat en ligne et en boutique ! C'est le cadeau idéal pour les amateurs de technologies et d'expériences inédites. Nos bons cadeaux sont disponibles pour tous nos packages : session découverte, expérience premium, formule groupe, et même l'abonnement mensuel. Les cartes cadeaux sont <strong>valables 12 mois</strong> à partir de la date d'achat. Rendez-vous sur notre page <a href="packages.html">Packages & Tarifs</a> ou contactez-nous directement pour plus d'informations.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Social Media Section -->
+  <section class="section-social">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Suivez-nous sur les <span style="color:var(--primary);">réseaux sociaux</span></h2>
+        <p>Restez connectés et ne manquez aucune actualité, offre ou événement</p>
+      </div>
+      <div class="row justify-content-center stagger-children">
+
+        <!-- Facebook -->
+        <div class="col-lg col-md-4 col-6 mb-4 reveal">
+          <a href="#" style="text-decoration:none;">
+            <div class="card-glass social-card">
+              <div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
+              <h4>Facebook</h4>
+              <p>12K+ abonnés</p>
+              <span class="social-handle">@theboxvr.paris</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="col-lg col-md-4 col-6 mb-4 reveal">
+          <a href="#" style="text-decoration:none;">
+            <div class="card-glass social-card">
+              <div class="social-icon instagram"><i class="fab fa-instagram"></i></div>
+              <h4>Instagram</h4>
+              <p>18K+ abonnés</p>
+              <span class="social-handle">@theboxvr</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Twitter -->
+        <div class="col-lg col-md-4 col-6 mb-4 reveal">
+          <a href="#" style="text-decoration:none;">
+            <div class="card-glass social-card">
+              <div class="social-icon twitter"><i class="fab fa-twitter"></i></div>
+              <h4>Twitter</h4>
+              <p>5K+ abonnés</p>
+              <span class="social-handle">@theboxvr</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- TikTok -->
+        <div class="col-lg col-md-4 col-6 mb-4 reveal">
+          <a href="#" style="text-decoration:none;">
+            <div class="card-glass social-card">
+              <div class="social-icon tiktok"><i class="fab fa-tiktok"></i></div>
+              <h4>TikTok</h4>
+              <p>25K+ abonnés</p>
+              <span class="social-handle">@theboxvr</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- YouTube -->
+        <div class="col-lg col-md-4 col-6 mb-4 reveal">
+          <a href="#" style="text-decoration:none;">
+            <div class="card-glass social-card">
+              <div class="social-icon youtube"><i class="fab fa-youtube"></i></div>
+              <h4>YouTube</h4>
+              <p>8K+ abonnés</p>
+              <span class="social-handle">THE BOX VR</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- CTA Section -->
+  <section class="section-cta-contact">
+    <div class="container">
+      <div class="card-glass cta-box reveal-scale">
+        <h2>Prêt à vivre l'<span style="color:var(--primary);">expérience</span> ?</h2>
+        <p>Ne manquez pas l'occasion de découvrir la réalité virtuelle nouvelle génération. Réservez votre session dès maintenant et plongez dans des mondes extraordinaires.</p>
+        <div>
+          <a href="packages.html" class="btn-neon btn-neon-primary"><i class="fas fa-calendar-check"></i> Réserver une session</a>
+          <a href="equipements.html" class="btn-neon btn-neon-outline"><i class="fas fa-vr-cardboard"></i> Voir nos équipements</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 style="font-family:var(--font-heading);font-size:1.3rem;">THE<b>BOX</b> <span style="color:var(--primary);">VR</span></h5>
+          <p>La première salle de réalité virtuelle nouvelle génération. Des expériences immersives uniques dans un cadre exceptionnel alliant technologie de pointe et convivialité.</p>
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 mb-4">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-4">
+          <h5>Infos</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="#">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5>Contact</h5>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h5 style="margin:0;">Adresse</h5><p>123 Rue de la Réalité Virtuelle, 75001 Paris</p></div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div><h5 style="margin:0;">Horaires</h5><p>Mar-Dim : 10h - 22h | Lun : Fermé</p></div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-phone"></i></div>
+            <div><h5 style="margin:0;">Téléphone</h5><p>01 23 45 67 89</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <div class="container text-center">
+      <p>Copyright &copy; THE BOX VR 2026 - Tous droits réservés</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="btn-back-top" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
