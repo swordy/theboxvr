@@ -111,3 +111,20 @@ The site content uses **French** for user-facing section headings ("A propos", "
 - The v2 site contains placeholder Lorem Ipsum content in the Services and Contact sections -- these are intended to be replaced with real content.
 - The `v2/vendor/` directory contains committed copies of dependencies. If updating these libraries, run `npm install` then `gulp copy` to refresh them.
 - File paths with spaces exist in the repo (e.g., `Cover Facebook.jpg`). Use quotes when referencing them in commands.
+
+## Visual Explainer Skill
+
+The **visual-explainer** skill is installed in `.claude/skills/visual-explainer/`. It generates styled HTML pages (diagrams, tables, slides) instead of ASCII art. Read `.claude/skills/visual-explainer/SKILL.md` when any of the following slash commands are invoked:
+
+| Command | Purpose |
+|---------|---------|
+| `/generate-web-diagram` | Create interactive HTML diagrams (Mermaid, architecture, flowcharts) |
+| `/generate-visual-plan` | Visual implementation planning |
+| `/generate-slides` | Slide deck generation |
+| `/diff-review` | Visual code diff analysis with architecture comparison |
+| `/plan-review` | Compare plans against codebase with risk assessment |
+| `/project-recap` | Context-switching snapshot of project state |
+| `/fact-check` | Verify document accuracy against actual code |
+| `/share` | Deploy generated HTML to Vercel for sharing |
+
+Output is saved to `~/.agent/diagrams/` and opened in the default browser.
